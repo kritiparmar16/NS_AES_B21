@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AES Encryption</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="light">
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="themeSwitcher" />
+      <span class="slider"></span>
+    </label>
+    <span class="theme-label">Dark Mode</span>
+  </div>
+
+  <div class="container">
+    <h1>AES Encryption</h1>
+    <p>
+      AES (Advanced Encryption Standard) is one of the most secure ciphers. It encrypts data to make it inaccessible without the correct key.
+      It is widely used for protecting sensitive data in communication, file storage, and networks.
+    </p>
+
+    <!-- Message Input -->
+    <div class="section">
+      <label for="inputText">Enter text to encrypt:</label>
+      <textarea id="inputText" rows="5" placeholder="Enter your message"></textarea>
+    </div>
+
+    <!-- Secret Key Input (now after message box) -->
+    <div class="section">
+      <label for="secretKey">Enter Secret Key:</label>
+      <input type="text" id="secretKey" placeholder="Enter your secret key" />
+      <button onclick="encryptText()">Encrypt</button>
+    </div>
+
+    <!-- Encrypted Output -->
+    <div class="output" id="encryptedOutput"></div>
+
+    <!-- Decrypt Section -->
+    <div class="section">
+      <button id="decryptButton" onclick="decryptText()">Decrypt Encrypted Text</button>
+      <div class="output" id="decryptedOutput"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
